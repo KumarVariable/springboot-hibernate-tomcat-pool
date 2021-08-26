@@ -14,6 +14,7 @@
 	<groupId>com.hibernate.boot</groupId>
 	<artifactId>springboot-hibernate-tomcat-pool</artifactId>
 	<version>1.0</version>
+	<packaging>jar</packaging>
 
 	<name>springboot-hibernate-tomcat-pool</name>
 	<description>Configure a Tomcat connection pool in Spring Boot 2 Hibernate Application.</description>
@@ -25,9 +26,11 @@
 		</developer>
 	</developers>
 
-	<!-- Starter provides dependencies to connect Spring Application with relational 
-		databases (e.g Hibernate) efficiently -->
+
 	<dependencies>
+
+		<!-- Starter provides dependencies to connect Spring Application with relational 
+			databases (e.g Hibernate) efficiently -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -41,7 +44,7 @@
 			</exclusions>
 		</dependency>
 
-		<!-- Add Dependency for Tomcat JDBC Connection Pool -->
+		<!-- Add Tomcat Jdbc Connection pooling -->
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-jdbc</artifactId>
@@ -61,18 +64,13 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- JUnit 5 dependency. -->
-		<!-- <dependency> <groupId>org.junit.jupiter</groupId> <artifactId>junit-jupiter-engine</artifactId> 
-			<scope>test</scope> </dependency> -->
-
-
 	</dependencies>
 
 	<build>
-		<finalName>springboot-hibernate-demo1</finalName>
+		<finalName>springboot-hibernate-basic-demo</finalName>
 
-		<!-- Spring Boot support in Apache Maven. Provides support to package executable 
-			jar or war arhives -->
+		<!-- Spring Boot support in Apache Maven.Provides support to package executable 
+			jar or war archives -->
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
