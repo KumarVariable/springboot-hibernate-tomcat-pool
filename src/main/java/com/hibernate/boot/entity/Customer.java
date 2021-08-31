@@ -1,5 +1,6 @@
 package com.hibernate.boot.entity;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 import javax.persistence.Column;
@@ -19,7 +20,12 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "customers")
-public class Customer {
+public class Customer implements Serializable {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 8391791032558628284L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -41,7 +47,7 @@ public class Customer {
 	@Column(nullable = true, name = "salesRepEmployeeNumber")
 	private Integer salesRepEmployeeNumber;
 
-	@Column(name = "creditLimit")
+	@Column(nullable = true,name = "creditLimit")
 	private BigDecimal creditLimit;
 
 	public int getCustomerNumber() {

@@ -12,6 +12,15 @@ import com.hibernate.boot.entity.Customer;
  * 
  */
 public interface CustomerService {
+
+	public int addCustomer(Customer customer);
+
 	public List<Customer> listAllCustomers();
+	
+	public Customer findById(int customerNumber);
+
+	public void upateCustomer(Customer customer);
+	
+	public void deleteCustomerById(int customerNumber);
 
 }
